@@ -11,6 +11,7 @@ jobs:
         if: always()
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
+          status: ${{ job.status }}
 
       - name: Checkout repository
         uses: actions/checkout@v3
